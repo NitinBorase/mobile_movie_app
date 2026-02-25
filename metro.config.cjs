@@ -7,7 +7,7 @@ try {
   withNativeWind = require('nativewind/metro').withNativeWind;
 } catch (e) {
   console.warn('nativewind/metro could not be loaded:', e.message);
-  withNativeWind = (config) => config;
+  withNativeWind = (config, p) => config;
 }
 
 const config = getDefaultConfig(__dirname);
